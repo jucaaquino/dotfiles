@@ -1,6 +1,6 @@
 #!/bin/bash
 
-link_file() {
+deploy_file() {
 	TARGET=$(dirname $1)/
 	if [[ "$TARGET" == "./" ]] then
 		TARGET=""
@@ -8,12 +8,13 @@ link_file() {
 	ln -sf $PWD/$1 $HOME/$TARGET
 }
 
-link_file .zshrc
-link_file .xinitrc
-link_file .config/bspwm
-link_file .config/sxhkd
-link_file .config/alacritty
-link_file .config/picom
-link_file .config/polybar
-link_file .config/tmux
-link_file .config/nvim
+deploy_file .zshrc
+deploy_file .xinitrc
+deploy_file .gitconfig
+deploy_file .config/bspwm
+deploy_file .config/sxhkd
+deploy_file .config/alacritty
+deploy_file .config/picom
+deploy_file .config/polybar
+deploy_file .config/tmux
+deploy_file .config/nvim
