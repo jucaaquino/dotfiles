@@ -2,7 +2,7 @@
 import = ["/home/juca/.config/alacritty/themes/tokyo-night.toml"]
 
 [font]
-builtin_box_drawing = true
+builtin_box_drawing = false
 size = 12
 
 [font.normal]

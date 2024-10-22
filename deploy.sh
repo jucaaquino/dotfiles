@@ -18,3 +18,4 @@ deploy_file .config/tmux
 deploy_file .gitconfig
 deploy_file .xinitrc
 deploy_file .zshrc
+deploy_file .zprofile
