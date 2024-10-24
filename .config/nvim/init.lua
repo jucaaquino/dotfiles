@@ -1,5 +1,4 @@
 require("config.lazy")
-require("config.keymaps")
 
 -- SETTINGS --
 vim.opt.nu = true
@@ -22,8 +21,17 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "0"
 vim.opt.clipboard:append("unnamedplus")
-vim.o.termguicolors = true
 
-vim.cmd.colorscheme("tokyonight")
+-- KEYMAPS --
+local builtin = require("telescope.builtin")
+local find_hidden = function()
+    builtin.find_files {
+        find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
+    }
+end
+
+vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>F", find_hidden, { desc = "Telescope find files" })
+
 vim.cmd("autocmd BufReadPost *.rhubarb set filetype=c")
-
+vim.cmd.colorscheme("tokyonight")

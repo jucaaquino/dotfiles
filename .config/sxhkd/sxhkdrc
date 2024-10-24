@@ -15,10 +15,10 @@ super + o
     pamixer -t
 
 super + {m,@comma}
-    brillo -q -u 150000 -{U,A} 10
+    brillo -u 150000 -{U,A} 10
 
 super + p
-    maim ~/Pictures/screenshot.png
+    maim $HOME/juca/media/screenshot.png
 
 # restart wm
 super + r
