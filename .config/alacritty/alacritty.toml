@@ -8,11 +8,14 @@ family = "pris"
 
 [window]
 dynamic_padding = true
-opacity = 1
+opacity = 0.95
 
 [env]
 TERM = "xterm-256color"
 
 [general]
+import = ["/home/juca/.config/alacritty/themes/gruvbox.toml"]
 
-import = ["/home/juca/.config/alacritty/themes/tokyo-night.toml"]
+[keyboard] # rebind <C-;> to <C-_> for nvim
+bindings = [{ key = ";", mods = "Control", chars = "\u001f" }]
+

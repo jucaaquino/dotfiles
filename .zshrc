@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="essembeh"
+#ZSH_THEME="duellj"
 #ENABLE_CORRECTION="true"
 plugins=(
     git
@@ -22,14 +23,14 @@ alias grep='grep --color=auto'
 alias htop='htop -U'
 alias nap='systemctl hibernate'
 alias rm='/bin/safe-rm'
-alias svenv='source .venv/bin/activate'
-alias mkvenv='python3 -m venv .venv'
 alias ls='ls --color=auto -N --group-directories-first'
+alias t='tmux'
+
+alias make_python_venv='python3 -m venv .venv'
+alias source_python_venv='source .venv/bin/activate'
 
 export RUST_BACKTRACE=1
 export FZF_DEFAULT_OPTS="--no-scrollbar --color 16 --color gutter:-1"
 
 echo '( .-.)'
-#echo '^_^'
-
 

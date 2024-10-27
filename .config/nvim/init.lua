@@ -23,15 +23,30 @@ vim.opt.colorcolumn = "0"
 vim.opt.clipboard:append("unnamedplus")
 
 -- KEYMAPS --
+
+local map = vim.keymap.set
+
+map("n", "<C-s>", vim.cmd.write)
+map("i", "<C-s>", vim.cmd.write)
+
 local builtin = require("telescope.builtin")
 local find_hidden = function()
-    builtin.find_files {
-        find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
-    }
+    builtin.find_files {find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' }}
 end
+local harpoon = require("harpoon")
+harpoon:setup()
 
-vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>F", find_hidden, { desc = "Telescope find files" })
+map("n", "<C-f>", builtin.find_files)
+map("n", "<C-h>", find_hidden)
+
+map("n", "<leader>a", function() harpoon:list():add() end)
+map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+map("n", "<C-j>", function() harpoon:list():select(1) end)
+map("n", "<C-k>", function() harpoon:list():select(2) end)
+map("n", "<C-l>", function() harpoon:list():select(3) end)
+map("n", "<C-_>", function() harpoon:list():select(4) end)
 
 vim.cmd("autocmd BufReadPost *.rhubarb set filetype=c")
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("gruvbox")
+

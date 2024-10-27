@@ -9,7 +9,7 @@ super + Return
 
 ### media control ###
 super + {u,i}
-    pamixer {-d,-i} 5
+    pamixer {-d,-i} 10
 
 super + o
     pamixer -t
@@ -25,30 +25,21 @@ super + r
     bspc wm -r; \
     pkill -USR1 -x sxhkd
 
-#super + s
-#    bspc config top_padding 0; \
-#    polybar-msg cmd toggle
-
 # close and kill
 super + {_,alt + }d
 	bspc node -{c,k}
 
-# set the window state
-super + {t,f,g}
-	bspc node -t {tiled,floating,fullscreen}
-
-super + alt + t
-    bspc node -t pseudo_tiled
-
-# focus the node in the given direction
-super + {_,alt + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+super + w
+    bspc node -t \~pseudo_tiled
 
 # focus given desktop
-super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+super + {j,k,l,@semicolon}
+	bspc desktop -f '^{1-4}'
+
+super + Tab
+	bspc node -f next.local.!hidden.window
 
 # send to desktop
-super + alt + {1-9,0}
-	bspc node -d '^{1-9,10}' --follow
+super + alt + {j,k,l,@semicolon}
+	bspc node -d '^{1-4}' --follow
 
