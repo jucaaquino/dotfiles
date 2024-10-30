@@ -32,13 +32,12 @@ super + {_,alt + }d
 super + w
     bspc node -t \~pseudo_tiled
 
+super + a
+	bspc node -f next.local.!hidden.window
+
 # focus given desktop
 super + {j,k,l,@semicolon}
 	bspc desktop -f '^{1-4}'
-
-super + Tab
-	bspc node -f next.local.!hidden.window
-
 # send to desktop
 super + alt + {j,k,l,@semicolon}
 	bspc node -d '^{1-4}' --follow

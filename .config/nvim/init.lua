@@ -28,6 +28,12 @@ local map = vim.keymap.set
 
 map("n", "<C-s>", vim.cmd.write)
 map("i", "<C-s>", vim.cmd.write)
+map("n", "<Enter>", "o<ESC>")
+
+--map("n", "<C-d>", "<C-d>")
+--map("n", "<C-u>", "<C-u>")
+--map("n", "n", "nzz")
+--map("n", "N", "Nzz")
 
 local builtin = require("telescope.builtin")
 local find_hidden = function()
@@ -48,5 +54,6 @@ map("n", "<C-l>", function() harpoon:list():select(3) end)
 map("n", "<C-_>", function() harpoon:list():select(4) end)
 
 vim.cmd("autocmd BufReadPost *.rhubarb set filetype=c")
+vim.cmd("autocmd BufReadPost *.glsl set filetype=c")
 vim.cmd.colorscheme("gruvbox")
 

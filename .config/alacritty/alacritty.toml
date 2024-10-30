@@ -1,14 +1,16 @@
 
 [font]
 builtin_box_drawing = false
-size = 12
+size = 15
 
 [font.normal]
-family = "pris"
+#family = "pris"
+family = "terminus"
+#family = "iosevka"
 
 [window]
 dynamic_padding = true
-opacity = 0.95
+opacity = 0.9
 
 [env]
 TERM = "xterm-256color"
@@ -16,6 +18,10 @@ TERM = "xterm-256color"
 [general]
 import = ["/home/juca/.config/alacritty/themes/gruvbox.toml"]
 
-[keyboard] # rebind <C-;> to <C-_> for nvim
-bindings = [{ key = ";", mods = "Control", chars = "\u001f" }]
+[keyboard] 
+bindings = [
+    { key = ";", mods = "Control", chars = "\u001f" }, # rebind <C-;> to <C-_> for vim
+    #    { key = "-", mods = "Control", command = "\u001f" },
+    #{ key = "=", mods = "Control", command = "\u001f" },
+]
 

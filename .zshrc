@@ -15,22 +15,21 @@ export EDITOR='nvim'
 ### aliases ###
 
 alias py='python3'
-alias c='clear'
 alias v='nvim'
-alias f='DIR=$(du --exclude "*/.*" | awk '\''{print $2}'\'' | sort -u | fzf); [ ! -z "$DIR" ] && cd $DIR'
-alias fh='DIR=$(du | awk '\''{print $2}'\'' | sort -u | fzf); [ ! -z "$DIR" ] && cd $DIR'
 alias grep='grep --color=auto'
-alias htop='htop -U'
 alias nap='systemctl hibernate'
 alias rm='/bin/safe-rm'
 alias ls='ls --color=auto -N --group-directories-first'
-alias t='tmux'
+alias bat='echo "Battery: $(cat /sys/class/power_supply/BAT0/capacity)%"'
+#alias f='$HOME/.config/tmux/tmux-sessionizer'
 
 alias make_python_venv='python3 -m venv .venv'
 alias source_python_venv='source .venv/bin/activate'
 
 export RUST_BACKTRACE=1
 export FZF_DEFAULT_OPTS="--no-scrollbar --color 16 --color gutter:-1"
+
+bindkey -s ^f "$HOME/.config/tmux/tmux-sessionizer"
 
 echo '( .-.)'
 
