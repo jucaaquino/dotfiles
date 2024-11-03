@@ -33,9 +33,7 @@ local map = vim.keymap.set
 
 map("n", "<C-s>", vim.cmd.write)
 map("i", "<C-s>", vim.cmd.write)
--- map("n", "<Enter>", "o<ESC>")
-
-map("n", "<C-e>", ":20Lex<CR>")
+map("n", "<C-e>", function() vim.cmd.Lex(20) end)
 
 local builtin = require("telescope.builtin")
 local find_hidden = function()

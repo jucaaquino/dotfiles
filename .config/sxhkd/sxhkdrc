@@ -8,8 +8,8 @@ super + Return
 	alacritty
 
 # media control
-super + {u,i}
-    pamixer {-d,-i} 10
+super + {_,alt + }v
+    pamixer {-i,-d} 10
 
 super + m
     pamixer -t
@@ -32,7 +32,7 @@ super + {_,alt + }d
 super + w
     bspc node -t \~pseudo_tiled
 
-super + o
+super + a
 	bspc node -f next.local.!hidden.window
 
 # focus given desktop
@@ -45,3 +45,5 @@ super + alt + {j,k,l,@semicolon}
 super + {@minus,@equal}
     $HOME/.config/alacritty/font-size -{d,i}
 
+super + o
+    bspc node '@parent' -R 180

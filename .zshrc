@@ -33,3 +33,5 @@ bindkey -s ^f "$HOME/.config/tmux/tmux-sessionizer"
 
 echo '( .-.)'
 
+# change git repo from https to ssh
+# git remote set-url origin git@github.com:OWNER/REPOSITORY.git

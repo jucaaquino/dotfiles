@@ -1,19 +1,20 @@
 
 [font]
-builtin_box_drawing = false
+builtin_box_drawing = true
 size = 15
 
 [font.normal]
 #family = "pris"
-family = "terminus"
+#family = "terminus"
 #family = "IBM XGA-AI"
 #family = "BmPlus IBM XGA-AI 12x20"
 #family = "cozette"
-#family = "iosevka"
+family = "iosevka"
+#family = "jetbrainsmono"
 
 [window]
 dynamic_padding = true
-opacity = 1
+opacity = 0.9
 
 [env]
 TERM = "xterm-256color"
