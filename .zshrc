@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 export VISUAL='nvim'
 export EDITOR='nvim'
+export BROWSER='firefox'
 
 ### aliases ###
 
@@ -31,7 +32,19 @@ export FZF_DEFAULT_OPTS="--no-scrollbar --color 16 --color gutter:-1"
 
 bindkey -s ^f "$HOME/.config/tmux/tmux-sessionizer"
 
-echo '( .-.)'
+EMOJI="(^-^*)
+(^_^)b
+\\(o_o)/
+(˚Δ˚)b
+(>_<)
+\\(^Д^)/
+(·.·)
+(·_·)
+(;-;)
+(='X'=)
+(≥o≤)
+(o^^)o"
 
+echo $(echo $EMOJI | shuf -n 1)
 # change git repo from https to ssh
 # git remote set-url origin git@github.com:OWNER/REPOSITORY.git

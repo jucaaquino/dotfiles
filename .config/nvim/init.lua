@@ -46,7 +46,7 @@ map("n", "<C-f>", builtin.find_files)
 map("n", "<C-h>", find_hidden)
 
 map("n", "<leader>a", function() harpoon:list():add() end)
-map("n", "<C-p>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+map("n", "<leader>f", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 map("n", "<leader>j", function() harpoon:list():select(1) end)
 map("n", "<leader>k", function() harpoon:list():select(2) end)
@@ -54,7 +54,7 @@ map("n", "<leader>l", function() harpoon:list():select(3) end)
 map("n", "<leader>;", function() harpoon:list():select(4) end)
 
 vim.cmd("autocmd BufReadPost *.rhubarb set filetype=c")
-vim.cmd("autocmd BufReadPost *.glsl set filetype=c")
+vim.cmd("autocmd BufReadPost *.glsl set filetype=glsl")
 --vim.cmd.colorscheme("catppuccin-mocha")
 vim.cmd.colorscheme("gruvbox")
 

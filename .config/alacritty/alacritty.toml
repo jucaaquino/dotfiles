@@ -1,4 +1,3 @@
-
 [font]
 builtin_box_drawing = true
 size = 15
@@ -11,6 +10,7 @@ size = 15
 #family = "cozette"
 family = "iosevka"
 #family = "jetbrainsmono"
+#family = "cascadia code"
 
 [window]
 dynamic_padding = true
