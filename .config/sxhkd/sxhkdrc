@@ -23,7 +23,7 @@ super + {_,alt + }b
     brillo -u 150000 -{A,U} 10
 
 # screenshot
-super + p
+super + c
     maim $HOME/juca/pictures/screenshot.png
 
 # restart wm

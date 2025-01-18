@@ -4,15 +4,14 @@ My configs.
 
 ## Requirements
 
-* neovim
-* zsh
-* git
-* bspwm
-* picom
 * alacritty
+* bspwm
+* git
+* neovim
 * picom
 * sxhkd
 * tmux
+* zsh
 
 ## Deployment
 

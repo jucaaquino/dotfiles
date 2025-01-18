@@ -1,3 +1,5 @@
 [user]
 	email = juca@jucaaquino.com
 	name = Juca Aquino
+[pull]
+	rebase = true
