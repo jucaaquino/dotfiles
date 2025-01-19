@@ -30,11 +30,10 @@ alias nap='systemctl hibernate'
 alias rm='/bin/safe-rm'
 alias ls='ls --color=auto -N --group-directories-first'
 alias bat='echo "Battery: $(cat /sys/class/power_supply/BAT0/capacity)%"'
+alias t='tmux-sessionizer'
 
 export RUST_BACKTRACE=1
 export FZF_DEFAULT_OPTS="--no-scrollbar --color 16 --color gutter:-1"
-
-bindkey -s ^f "$HOME/.config/tmux/tmux-sessionizer"
 
 EMOJI="(^-^*)
 (^_^)b

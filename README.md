@@ -1,6 +1,6 @@
 # dotfiles
 
-My configs.
+My Linux configs!
 
 ## Requirements
 

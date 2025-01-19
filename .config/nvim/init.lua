@@ -31,9 +31,9 @@ vim.g.netrw_liststyle = 3
 
 local map = vim.keymap.set
 
-map("n", "<C-s>", vim.cmd.write)
-map("i", "<C-s>", vim.cmd.write)
-map("n", "<C-e>", function() vim.cmd.Lex(20) end)
+map("n", "<C-e>", vim.cmd.write)
+map("i", "<C-e>", vim.cmd.write)
+map("n", "<C-t>", function() vim.cmd.Lex(20) end)
 
 local builtin = require("telescope.builtin")
 local find_hidden = function()
@@ -55,6 +55,5 @@ map("n", "<leader>;", function() harpoon:list():select(4) end)
 
 vim.cmd("autocmd BufReadPost *.rhubarb set filetype=c")
 vim.cmd("autocmd BufReadPost *.glsl set filetype=glsl")
---vim.cmd.colorscheme("catppuccin-mocha")
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("catppuccin-mocha")
 

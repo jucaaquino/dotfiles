@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find $HOME/juca/code -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find $HOME $HOME/code $HOME/dl $HOME/docs $HOME/img $HOME/work -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
@@ -13,7 +13,7 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+if [[ -z $TMUX ]]; then
     tmux new-session -s $selected_name -c $selected
     exit 0
 fi
