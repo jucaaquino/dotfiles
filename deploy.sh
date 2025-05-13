@@ -20,3 +20,4 @@ deploy_file .gitconfig
 deploy_file .scripts
 deploy_file .xinitrc
 deploy_file .zshrc
+deploy_file .emoji

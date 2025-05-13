@@ -9,6 +9,7 @@ addToPathFront() {
 }
 
 export PATH="$HOME/.scripts:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 plugins=(
     git
@@ -19,16 +20,20 @@ source $ZSH/oh-my-zsh.sh
 export VISUAL='nvim'
 export EDITOR='nvim'
 export BROWSER='firefox'
+export PYTHONPATH='/home/juca/code/vectorpark'
 
 ### aliases ###
 
 alias py='python3'
-alias lualatex='lualatex --interaction=nonstopmode'
+#alias lualatex='lualatex --interaction=nonstopmode'
 alias v='nvim'
 alias grep='grep --color=auto'
 alias nap='systemctl hibernate'
-alias rm='/bin/safe-rm'
-alias ls='ls --color=auto -N --group-directories-first'
+alias rm='echo :P'
+alias ls='ls -NX --group-directories-first --color=auto'
+alias gv='glslViewer'
+alias htop='htop -U'
+
 alias bat='echo "Battery: $(cat /sys/class/power_supply/BAT0/capacity)%"'
 alias t='tmux-sessionizer'
 
