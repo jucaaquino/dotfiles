@@ -1,6 +1,6 @@
 [font]
 builtin_box_drawing = true
-size = 15
+size = 16
 
 [font.normal]
 #family = "pris"
@@ -14,11 +14,11 @@ family = "iosevka"
 
 [window]
 dynamic_padding = true
-opacity = 0.9
+opacity = 0.85
 
 [env]
 TERM = "xterm-256color"
 
 [general]
-import = ["/home/juca/.config/alacritty/themes/catppucin.toml"]
+import = ["/home/juca/.config/alacritty/themes/kanagawa.toml"]
 

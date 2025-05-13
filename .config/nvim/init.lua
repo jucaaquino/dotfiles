@@ -31,9 +31,7 @@ vim.g.netrw_liststyle = 3
 
 local map = vim.keymap.set
 
-map("n", "<C-e>", vim.cmd.write)
-map("i", "<C-e>", vim.cmd.write)
-map("n", "<C-t>", function() vim.cmd.Lex(20) end)
+map("n", "<C-e>", function() vim.cmd.Lex(20) end)
 
 local builtin = require("telescope.builtin")
 local find_hidden = function()
@@ -42,18 +40,24 @@ end
 local harpoon = require("harpoon")
 harpoon:setup()
 
-map("n", "<C-f>", builtin.find_files)
-map("n", "<C-h>", find_hidden)
+map("n", "<leader>f", builtin.find_files)
+map("n", "<leader>h", find_hidden)
 
 map("n", "<leader>a", function() harpoon:list():add() end)
-map("n", "<leader>f", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+map("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 map("n", "<leader>j", function() harpoon:list():select(1) end)
 map("n", "<leader>k", function() harpoon:list():select(2) end)
 map("n", "<leader>l", function() harpoon:list():select(3) end)
 map("n", "<leader>;", function() harpoon:list():select(4) end)
 
-vim.cmd("autocmd BufReadPost *.rhubarb set filetype=c")
-vim.cmd("autocmd BufReadPost *.glsl set filetype=glsl")
-vim.cmd.colorscheme("catppuccin-mocha")
+map("n", "<CR>", "o<Esc>")
+
+vim.cmd("let g:fanfingtastic_ignorecase = 1")
+
+--vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("kanagawa-wave")
+
+vim.cmd("autocmd BufReadPost *.frag set filetype=glsl")
+vim.cmd("autocmd BufReadPost *.vert set filetype=glsl")
 

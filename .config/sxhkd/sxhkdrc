@@ -1,30 +1,31 @@
 
 # program launcher
 super + f
-    dmenu_run -i -fn 'pris-24' -nb '#000000' -nf '#ffffff' -sb '#1a1a1a' -sf '#ffffff'
+    dmenu_run -i -fn 'iosevka-21' -nb '#000000' -nf '#ffffff' -sb '#1a1a1a' -sf '#ffffff' -l 10
 
-super + p
+super + o
     passmenu
 
 # terminal
-super + Return
+super + @space
 	alacritty
 
-# volume
-super + {_,alt + }v
+XF86Audio{Raise,Lower}Volume
     pamixer {-i,-d} 10
 
-# mute
-super + m
-    pamixer -t
+XF86AudioMute
+    pamixer --toggle-mute
 
 # brightness
-super + {_,alt + }b
-    brillo -u 150000 -{A,U} 10
+F11 
+    brillo -u 150000 -U 20
+
+F12
+    brillo -u 150000 -A 20
 
 # screenshot
-super + @space
-    maim $HOME/pics/screenshot.png
+super + p
+    maim $HOME/img/screenshot.png
 
 # restart wm
 super + r
@@ -32,6 +33,9 @@ super + r
     pkill -USR1 -x sxhkd
 
 # close and kill
+super + {_,shift + }d
+	bspc node -{c,k}
+
 super + {_,alt + }d
 	bspc node -{c,k}
 
@@ -39,11 +43,15 @@ super + w
     bspc node -t \~pseudo_tiled
 
 # focus given desktop
-super + {j,k,l,@semicolon}
-	bspc desktop -f '^{1-4}'
+super + {j,k,l,@semicolon,m,@comma,@period,@slash}
+	bspc desktop -f '^{1-8}'
+
 # send to desktop
-super + alt + {j,k,l,@semicolon}
-    bspc node -d '^{1-4}' --follow
+super + shift + {j,k,l,@semicolon,m,@comma,@period,@slash}}
+    bspc node -d '^{1-8}' --follow
+
+super + alt + {j,k,l,@semicolon,m,@comma,@period,@slash}}
+    bspc node -d '^{1-8}' --follow
 
 super + {@minus,@equal}
     $HOME/.config/alacritty/font-size -{d,i}
