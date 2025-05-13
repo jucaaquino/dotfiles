@@ -3,3 +3,5 @@
 	name = Juca Aquino
 [pull]
 	rebase = true
+[init]
+	defaultBranch = master
