@@ -1,1 +1,0 @@
-magick $1 -strip -interlace JPEG -quality 75% -sampling-factor 4:2:0 -colorspace sRGB $1
