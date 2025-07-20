@@ -1,21 +1,11 @@
 # dotfiles
-
 My Linux configs!
 
-## Requirements
-
-* alacritty
-* bspwm
-* git
-* neovim
-* picom
-* sxhkd
-* tmux
-* zsh
-
-## Deployment
+## Installation
+Can be installed by cloning the repo and deploying with GNU Stow:
 
 ```bash
-./deploy.sh
+git clone https://github.com/jucaaquino/dotfiles
+stow --no-folding dotfiles
 ```
 
