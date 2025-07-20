@@ -53,4 +53,4 @@ EMOJI="(^-^*)
 (≥o≤)
 (o^^)o"
 
-echo $(echo $EMOJI | shuf -n 1)
+neofetch

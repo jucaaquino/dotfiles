@@ -1,24 +1,16 @@
 [font]
 builtin_box_drawing = true
-size = 16
-
-[font.normal]
-#family = "pris"
-#family = "terminus"
-#family = "IBM XGA-AI"
-#family = "BmPlus IBM XGA-AI 12x20"
-#family = "cozette"
-family = "iosevka"
-#family = "jetbrainsmono"
-#family = "cascadia code"
+size = 24
+normal.family = "iosevka"
 
 [window]
 dynamic_padding = true
-opacity = 0.85
+opacity = 0.9
+decorations = "Buttonless"
 
 [env]
 TERM = "xterm-256color"
 
 [general]
-import = ["/home/juca/.config/alacritty/themes/kanagawa.toml"]
+import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
 
