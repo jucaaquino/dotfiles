@@ -55,8 +55,7 @@ map("n", "<CR>", "o<Esc>")
 
 vim.cmd("let g:fanfingtastic_ignorecase = 1")
 
---vim.cmd.colorscheme("catppuccin-mocha")
-vim.cmd.colorscheme("kanagawa-wave")
+vim.cmd.colorscheme("catppuccin-mocha")
 
 vim.cmd("autocmd BufReadPost *.frag set filetype=glsl")
 vim.cmd("autocmd BufReadPost *.vert set filetype=glsl")
