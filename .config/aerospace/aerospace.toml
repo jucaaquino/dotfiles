@@ -39,14 +39,16 @@ automatically-unhide-macos-hidden-apps = false
     alt-period        = 'workspace 7'
     alt-slash         = 'workspace 8'
 
-    alt-cmd-j         = ['move-node-to-workspace 1', 'workspace 1']
-    alt-cmd-k         = ['move-node-to-workspace 2', 'workspace 2']
-    alt-cmd-l         = ['move-node-to-workspace 3', 'workspace 3']
-    alt-cmd-semicolon = ['move-node-to-workspace 4', 'workspace 4']
-    alt-cmd-m         = ['move-node-to-workspace 5', 'workspace 5']
-    alt-cmd-comma     = ['move-node-to-workspace 6', 'workspace 6'] 
-    alt-cmd-period    = ['move-node-to-workspace 7', 'workspace 7']
-    alt-cmd-slash     = ['move-node-to-workspace 8', 'workspace 8']
+    alt-shift-j         = ['move-node-to-workspace 1', 'workspace 1']
+    alt-shift-k         = ['move-node-to-workspace 2', 'workspace 2']
+    alt-shift-l         = ['move-node-to-workspace 3', 'workspace 3']
+    alt-shift-semicolon = ['move-node-to-workspace 4', 'workspace 4']
+    alt-shift-m         = ['move-node-to-workspace 5', 'workspace 5']
+    alt-shift-comma     = ['move-node-to-workspace 6', 'workspace 6'] 
+    alt-shift-period    = ['move-node-to-workspace 7', 'workspace 7']
+    alt-shift-slash     = ['move-node-to-workspace 8', 'workspace 8']
 
+    alt-h = 'focus --boundaries-action wrap-around-the-workspace dfs-next'
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+

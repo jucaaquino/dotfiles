@@ -8,8 +8,7 @@ addToPathFront() {
     fi
 }
 
-export PATH="$HOME/.scripts:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 plugins=(
     git
@@ -25,12 +24,11 @@ export PYTHONPATH='/home/juca/code/vectorpark'
 ### aliases ###
 
 alias py='python3'
-#alias lualatex='lualatex --interaction=nonstopmode'
 alias v='nvim'
 alias grep='grep --color=auto'
 alias nap='systemctl hibernate'
 alias rm='echo :P'
-alias ls='ls -NX --group-directories-first --color=auto'
+#alias ls='ls -X --group-directories-first --color=auto'
 alias gv='glslViewer'
 alias htop='htop -U'
 
