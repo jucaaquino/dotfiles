@@ -1,0 +1,30 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="essembeh"
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+export PATH="$HOME/bin:$PATH"
+
+plugins=(
+    git
+    zsh-vi-mode
+)
+source $ZSH/oh-my-zsh.sh
+
+export VISUAL='nvim'
+export EDITOR='nvim'
+export BROWSER='firefox'
+export RUST_BACKTRACE=1
+export FZF_DEFAULT_OPTS="--no-scrollbar --color 16 --color gutter:-1"
+
+### aliases ###
+
+alias vim='nvim'
+alias grep='grep --color=auto'
+alias nap='systemctl hibernate'
+
