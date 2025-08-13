@@ -6,6 +6,6 @@ Can be installed by cloning the repo and deploying with GNU Stow:
 
 ```bash
 git clone https://github.com/jucaaquino/dotfiles
-stow --no-folding dotfiles
+stow --dotfiles dotfiles
 ```
 

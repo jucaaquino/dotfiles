@@ -17,4 +17,5 @@ return {
     "whatyouhide/vim-gotham",
     "maxmx03/solarized.nvim",
     "blazkowolf/gruber-darker.nvim",
+    "tek256/simple-dark"
 }

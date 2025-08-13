@@ -1,0 +1,4 @@
+aerospace focus \
+    --boundaries-action wrap-around-the-workspace dfs-next
+aerospace focus \
+    --boundaries-action wrap-around-the-workspace dfs-next
