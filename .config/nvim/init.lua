@@ -31,35 +31,28 @@ vim.g.netrw_liststyle = 3
 
 local map = vim.keymap.set
 
-map("n", "<leader>t", function() vim.cmd.Lex(25) end)
+map("n", "<leader>t", function() vim.cmd.Lex(20) end)
 
 local builtin = require("telescope.builtin")
-local find_hidden = function()
-    builtin.find_files {
-        find_command = { 
-            'rg', '--files', '--iglob', '!.git', '--hidden' 
-        }
-    }
-end
 local harpoon = require("harpoon")
 harpoon:setup()
 
 map("n", "<leader>f", builtin.find_files)
-map("n", "<leader>h", find_hidden)
 
 map("n", "<leader>a", function() harpoon:list():add() end)
 map("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
-map("n", "<leader>1", function() harpoon:list():select(1) end)
-map("n", "<leader>2", function() harpoon:list():select(2) end)
-map("n", "<leader>3", function() harpoon:list():select(3) end)
-map("n", "<leader>4", function() harpoon:list():select(4) end)
+map("n", "<leader>j", function() harpoon:list():select(1) end)
+map("n", "<leader>k", function() harpoon:list():select(2) end)
+map("n", "<leader>l", function() harpoon:list():select(3) end)
+map("n", "<leader>;", function() harpoon:list():select(4) end)
 
 map("n", "<CR>", "o<Esc>")
 
 vim.cmd("let g:fanfingtastic_ignorecase = 1")
 
-vim.cmd.colorscheme("tokyonight")
+
+vim.cmd.colorscheme("solarized")
 
 vim.cmd("autocmd BufReadPost *.frag set filetype=glsl")
 vim.cmd("autocmd BufReadPost *.vert set filetype=glsl")
