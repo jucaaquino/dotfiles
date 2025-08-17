@@ -1,16 +1,18 @@
 [font]
 builtin_box_drawing = false
-size = 22
+size = 20
 normal.family = "ibm plex mono"
 
 [window]
 dynamic_padding = true
 opacity = 0.9
 decorations = "Buttonless"
+padding.x = 10
+padding.y = 10
 
 [env]
 TERM = "xterm-256color"
 
 [general]
-import = ["~/.config/alacritty/themes/themes/tokyo_night.toml"]
+import = ["~/.config/alacritty/themes/themes/solarized_osaka.toml"]
 

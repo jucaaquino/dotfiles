@@ -1,0 +1,51 @@
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 40
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+automatically-unhide-macos-hidden-apps = false
+
+[key-mapping]
+    preset = 'qwerty'
+
+[gaps]
+    inner.horizontal = 20
+    inner.vertical   = 20
+    outer.left       = 20
+    outer.right      = 20
+    outer.bottom     = 20
+    outer.top        = 20
+
+[mode.main.binding]
+    alt-t = 'layout tiles horizontal vertical'
+    alt-a = 'layout accordion horizontal vertical'
+
+    alt-u = 'resize smart -20'
+    alt-i = 'resize smart +20'
+
+    alt-j           = 'workspace 1'
+    alt-k           = 'workspace 2'
+    alt-l           = 'workspace 3'
+    alt-semicolon   = 'workspace 4'
+    alt-m           = 'workspace 5'
+    alt-comma       = 'workspace 6'
+    alt-period      = 'workspace 7'
+    alt-slash       = 'workspace 8'
+
+    alt-shift-j         = ['move-node-to-workspace 1', 'workspace 1']
+    alt-shift-k         = ['move-node-to-workspace 2', 'workspace 2']
+    alt-shift-l         = ['move-node-to-workspace 3', 'workspace 3']
+    alt-shift-semicolon = ['move-node-to-workspace 4', 'workspace 4']
+    alt-shift-m         = ['move-node-to-workspace 5', 'workspace 5']
+    alt-shift-comma     = ['move-node-to-workspace 6', 'workspace 6'] 
+    alt-shift-period    = ['move-node-to-workspace 7', 'workspace 7']
+    alt-shift-slash     = ['move-node-to-workspace 8', 'workspace 8']
+
+    alt-h = 'focus --boundaries-action wrap-around-the-workspace dfs-next'
+    alt-p   = 'join-with right'
+

@@ -6,16 +6,10 @@ return {
     "morhetz/gruvbox",
     "rebelot/kanagawa.nvim",
     "sainnhe/everforest",
-    "dracula/vim",
     "catppuccin/nvim",
     "jdsimcoe/hyper.vim",
-    "luisiacc/the-matrix.nvim",
-    "fxn/vim-monochrome",
-    "vim-scripts/chlordane.vim",
     "shaunsingh/nord.nvim",
-    "thedenisnikulin/vim-cyberpunk",
     "whatyouhide/vim-gotham",
     "maxmx03/solarized.nvim",
     "blazkowolf/gruber-darker.nvim",
-    "tek256/simple-dark"
 }

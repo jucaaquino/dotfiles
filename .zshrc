@@ -20,11 +20,13 @@ export VISUAL='nvim'
 export EDITOR='nvim'
 export BROWSER='firefox'
 export RUST_BACKTRACE=1
+
 export FZF_DEFAULT_OPTS="--no-scrollbar --color 16 --color gutter:-1"
 
-### aliases ###
+# aliases
 
 alias vim='nvim'
 alias grep='grep --color=auto'
 alias nap='systemctl hibernate'
+alias rm='trash'
 
