@@ -1,3 +1,2 @@
-# global gitignore file
-
-.DS_Store
+.config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
