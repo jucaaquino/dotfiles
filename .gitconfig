@@ -6,4 +6,4 @@
 [init]
 	defaultBranch = master
 [core]
-	excludesFile = ~/.gitignore
+	excludesFile = ~/.gitignore-global
