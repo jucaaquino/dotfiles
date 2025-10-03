@@ -1,0 +1,32 @@
+#!/bin/sh
+
+name=""
+
+while getopts ":n" flag; do
+ case $flag in
+   n)
+       name="%(uploader)s - "
+   ;;
+ esac
+done
+shift $((OPTIND-1))
+
+url="$1"
+target_directory="$(pwd)"
+
+if [ ! -z "$2" ]; then
+    target_directory="$2"
+fi
+
+if [ ! "${target_directory: -1}" = "/" ]; then
+    target_directory="$target_directory/"
+fi
+
+yt-dlp \
+    --extract-audio \
+    --audio-format mp3 \
+    --output "$target_directory$name%(title)s.%(ext)s" \
+    "$url"
+
+
+
