@@ -1,0 +1,1 @@
+rsync -a --exclude=".*" --exclude="Library" --exclude="iCloud" --progress --delete $HOME /Volumes/aquino
