@@ -1,0 +1,3 @@
+return {
+    "dahu/vim-fanfingtastic"
+}
