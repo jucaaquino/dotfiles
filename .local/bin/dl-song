@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mkdir -p ~/Music/spotify
+yt-dlp -x --audio-format mp3 --cookies-from-browser firefox -o "~/Music/spotify/%(title)s.%(ext)s" "$1"

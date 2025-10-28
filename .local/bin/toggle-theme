@@ -1,0 +1,15 @@
+#!/bin/sh
+
+current_theme=$(cat ~/Developer/dotfiles/.config/alacritty/theme.toml)
+
+if [[ $current_theme == *"day"* ]]; then
+    echo 'general.import = ["~/.config/alacritty/themes/tokyonight-night.toml"]' \
+        > ~/Developer/dotfiles/.config/alacritty/theme.toml
+else
+    echo 'general.import = ["~/.config/alacritty/themes/tokyonight-day.toml"]' \
+        > ~/Developer/dotfiles/.config/alacritty/theme.toml
+fi
+
+
+touch ~/Developer/dotfiles/.config/alacritty/alacritty.toml
+
