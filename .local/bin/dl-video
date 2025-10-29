@@ -1,3 +1,4 @@
 #!/bin/sh
 
-yt-dlp -t mp4 -o "~/iCloud/Movies/%(title)s.%(ext)s" $1
+mkdir -p "$HOME/Movies/youtube"
+yt-dlp -t mp4 --embed-thumbnail -o "$HOME/Movies/youtube/[%(uploader)s] %(title)s.%(ext)s" $1

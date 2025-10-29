@@ -20,9 +20,29 @@
 #         \:|   |                  \::/    /                \::/    /
 #          \|___|                   \/____/                  \/____/
 
-bind-key h quit
+run-on-startup select-tag
+auto-reload yes
+
 bind-key j down
 bind-key k up
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+
+bind-key h quit
 bind-key l open
 
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+
+bind-key U show-urls
+
+
+macro a set browser "yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" ; open-in-browser ; set browser linkhandler
+
+
 color info white black
+color listfocus white black
+color listfocus_unread white black
+

@@ -2,19 +2,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="essembeh"
 
-addToPathFront() {
-    if [[ "$PATH" != *"$1"* ]]; then
-        export PATH=$1:$PATH
-    fi
-}
+export PATH="$HOME/.local/bin:$PATH"
+plugins=(zsh-vi-mode)
 
-export PATH="$HOME/bin:$PATH"
-
-plugins=(
-    git
-    zsh-vi-mode
-)
 source $ZSH/oh-my-zsh.sh
+unsetopt extended_history
+unsetopt share_history
 
 export VISUAL='nvim'
 export EDITOR='nvim'
@@ -29,4 +22,5 @@ alias vim='nvim'
 alias grep='grep --color=auto'
 alias nap='systemctl hibernate'
 alias rm='trash'
-
+alias rss='newsboat'
+alias stow='stow --ignore="\.DS_Store"'
